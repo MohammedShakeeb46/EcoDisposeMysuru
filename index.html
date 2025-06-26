@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDispose - Mysuru Waste Disposal Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Animated Background Elements -->
+        <div class="bg-elements">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+
+        <header class="app-header">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <h1>EcoDispose<span>Mysuru</span></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        
+                    </ul>
+                </nav>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>Proper Waste Disposal in <span>Mysuru</span></h2>
+                        <p>Find how to dispose any item correctly in Mysuru City</p>
+                    </div>
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="Search for a waste item (e.g. plastic bottle, battery)...">
+                            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+                        </div>
+                        <div class="suggestions" id="suggestions"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="search-results container" id="search-results"></div>
+
+            <section class="quick-tips-section">
+                <div class="container">
+                    <h2 class="section-title">Quick Disposal Tips for Mysuru</h2>
+                    <div class="tips-container">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <h3>General Waste</h3>
+                            <p>Use black bins for non-recyclable waste. Collected daily in Mysuru.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <h3>Recyclables</h3>
+                            <p>Blue bins collected every Wednesday in residential areas.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                            <h3>Hazardous Waste</h3>
+                            <p>Special collection every 1st Saturday at designated points.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <h3>Organic Waste</h3>
+                            <p>Green bins collected daily. Mandatory segregation in Mysuru.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Waste Item Modal -->
+        <div class="modal" id="item-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modal-title">Item Name</h2>
+                    <span class="item-category" id="modal-category">Category</span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-info">
+                        <div class="info-section">
+                            <h3><i class="fas fa-info-circle"></i> Description</h3>
+                            <p id="modal-description">Description text</p>
+                        </div>
+                        <div class="info-section">
+                            <h3><i class="fas fa-trash-alt"></i> Disposal Method</h3>
+                            <p id="modal-disposal">Disposal method</p>
+                            <div class="bin-type">
+                                <span>Bin Type:</span>
+                                <div class="bin-color" id="modal-bin-color"></div>
+                                <span id="modal-bin-type">Bin type</span>
+                            </div>
+                        </div>
+                        <div class="info-section mysuru-contacts">
+                            <h3><i class="fas fa-map-marker-alt"></i> Mysuru Contacts</h3>
+                            <div class="contact-card">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>MCC Waste Helpline</h4>
+                                    <p id="modal-contact">0821-2414141</p>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-map-pin"></i>
+                                <div>
+                                    <h4>Collection Point</h4>
+                                    <p id="modal-location">Vijayanagar Waste Processing Unit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <h3><i class="fas fa-lightbulb"></i> Local Tips</h3>
+                            <p id="modal-tips">Tips text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h3>EcoDispose Mysuru</h3>
+                        <p>Helping Mysureans dispose waste responsibly since 2025</p>
+                        <div class="city-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mysore_City_Corporation_Logo.png/120px-Mysore_City_Corporation_Logo.png" alt="Mysuru City Corporation">
+                        </div>
+                    </div>
+                    <div class="footer-section links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="education.html">Education</a></li>
+                    </div>
+                    <div class="footer-section contact">
+                        <h3>Mysuru Contacts</h3>
+                        <p><i class="fas fa-phone"></i> MCC Control Room: 0821-2414141</p>
+                        <p><i class="fas fa-envelope"></i> mcc@mysurucity.mrc.gov.in</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 202 EcoDispose Mysuru..</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
